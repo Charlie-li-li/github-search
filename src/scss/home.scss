@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  .head_box {
+    position: fixed;
+    width: 100%;
+    background-color: #282c34;
+  }
+  .error,
+  .loading,
+  .no_data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .search {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    .search_input {
+      border-radius: 5px;
+      border: 1px solid #999;
+      width: 90%;
+      padding: 20px 0 20px 10px;
+      font-size: 36px;
+      outline: none;
+      margin: 16px 0;
+    }
+    .close {
+      position: absolute;
+      right: 5%;
+      top: 30%;
+      svg {
+        height: 46px;
+        width: 46px;
+      }
+    }
+  }
+  .history {
+    width: 90%;
+    margin: 0 auto;
+    .title {
+      padding: 160px 0 10px 0;
+      display: flex;
+      justify-content: space-between;
+      .title_word {
+        font-size: 36px;
+      }
+    }
+    .item {
+      padding: 16px 20px;
+      background-color: #282c34;
+      color: #fff;
+      margin: 15px 15px 15px 0;
+      display: inline-block;
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+  .pullup {
+    height: calc(100vh - 74px);
+    padding-top: 120px;
+    width: 95%;
+    margin: 0 auto;
+    .pullup-wrapper {
+      height: 100%;
+      padding: 0 10px;
+      overflow: hidden;
+    }
+    .pullup-list-item {
+      padding: 24px 0;
+      list-style: none;
+      border-bottom: 1px solid #ccc;
+    }
+    .pullup-list {
+      padding: 0;
+    }
+    .pullup-tips {
+      padding: 30px;
+      text-align: center;
+      color: #999;
+    }
+  }
+}
