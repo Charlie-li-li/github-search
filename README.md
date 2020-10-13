@@ -1,5 +1,6 @@
 # Github Serch
-react-Hooks项目实战，一个简单的Github搜索实际例子,可以查看历史搜索内容
+
+React-Hooks project combat, a simple Github search practical example, you can view historical search content
 
 # How to skrrt
 - npm install
