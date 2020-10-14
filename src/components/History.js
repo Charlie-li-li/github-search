@@ -9,7 +9,7 @@ export default (props) => {
     <div className="history">
       <div className="title">
         <span className="title_word">{HISTORY_TEXT}</span>
-        <div onClick={clearSearchHistory}>
+        <div className="clear" onClick={clearSearchHistory}>
           <ClearIcon />
         </div>
       </div>
