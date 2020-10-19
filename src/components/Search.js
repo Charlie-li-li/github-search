@@ -1,10 +1,10 @@
 import React, { useRef, useContext } from "react";
 import CloseIcon from "./CloseIcon";
 import GithubContext from "../context/githubContext";
+import { SEARCH_TEXT } from '../constantes';
 
 const Search = () => {
   const timerRef = useRef(null);
-  const inputEl = useRef(null);
   const githubContext = useContext(GithubContext);
   const {
     clearRepo,
@@ -41,11 +41,11 @@ const Search = () => {
   return (
     <div className="search">
       <input
-        className="search_input"
-        ref={inputEl}
-        value={searchValue}
-        onChange={handleSearchInputChanges}
         type="text"
+        value={searchValue}
+        className="search_input"
+        onChange={handleSearchInputChanges}
+        placeholder={SEARCH_TEXT}
       />
       {searchValue && <CloseIcon onClose={resetInputField} />}
     </div>

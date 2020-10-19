@@ -17,7 +17,6 @@ export default (state, action) => {
       return {
         ...state,
         loading: true,
-        errorMessage: null,
       };
     case SEARCH_REPO_SUCCESS:
       return {
@@ -43,6 +42,7 @@ export default (state, action) => {
         ...state,
         repoList: [],
         repoResult: {},
+        errorMessage: null,
       };
     case SEARCH_REPO_HISTORY:
       if (!isExitHistory(action.payload, state.historySearch)) {

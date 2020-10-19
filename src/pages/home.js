@@ -8,7 +8,7 @@ import "../scss/home.scss";
 const App = () => {
   const githubContext = useContext(GithubContext);
   const { loading, errorMessage } = githubContext;
-  const renderError = () => <div className="error">{errorMessage}</div>;
+  const renderError = () => <div className="error">{errorMessage?.message}</div>;
   const renderLoading = () =>
     loading && <div className="loading">{LOADINF_TEXT}</div>;
   return (
