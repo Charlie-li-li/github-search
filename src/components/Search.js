@@ -5,7 +5,6 @@ import { SEARCH_TEXT } from '../constantes';
 
 const Search = () => {
   const timerRef = useRef(null);
-  
   const githubContext = useContext(GithubContext);
   const {
     clearRepo,
