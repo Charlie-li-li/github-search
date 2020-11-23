@@ -16,7 +16,7 @@ BScroll.use(Pullup);
 
 export default () => {
   const bscrollRef = useRef(null);
-  let bscroll = null;
+  let bscroll = useRef(null);
   const [isPullUpLoad, setISPullUpLoad] = useState(false);
   const githubContext = useContext(GithubContext);
   const {
@@ -39,18 +39,18 @@ export default () => {
 
   useEffect(() => {
     if (bscrollRef.current) {
-      bscroll = new BScroll(bscrollRef.current, {
+      bscroll.current = new BScroll(bscrollRef.current, {
         pullUpLoad: true,
       });
-      bscroll.on("pullingUp", pullingUpHandler);
+      bscroll.current.on("pullingUp", pullingUpHandler);
     }
   });
 
   const pullingUpHandler = async () => {
     setISPullUpLoad(true);
     await searchGithub({ hasNextPage, searchValue, endCursor });
-    bscroll.finishPullUp();
-    bscroll.refresh();
+    bscroll.current.finishPullUp();
+    bscroll.current.refresh();
     setISPullUpLoad(false);
   };
 
