@@ -16,7 +16,7 @@ BScroll.use(Pullup);
 
 export default () => {
   const bscrollRef = useRef(null);
-  let bscroll = useRef(null);
+  let bscroll = null;
   const [isPullUpLoad, setISPullUpLoad] = useState(false);
   const githubContext = useContext(GithubContext);
   const {
