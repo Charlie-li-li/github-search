@@ -2,6 +2,7 @@
   "name": "github-search1",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://libaoli521.github.io/github-search",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@better-scroll/core": "^2.0.4",
