@@ -21,7 +21,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           # 生成文件的目录
-          PUBLISH_DIR: ./build
+          PUBLISH_DIR: build
