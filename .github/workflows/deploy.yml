@@ -19,9 +19,8 @@ jobs:
 
       # 部署
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.0
+        uses: JamesIves/github-pages-deploy-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          # 生成文件的目录
-          PUBLISH_DIR: build
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
