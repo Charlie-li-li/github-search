@@ -12,7 +12,7 @@ const SEARCH_TEXT = "Please input search in github";
 
 const TOKEN =
   process.env.APP_GITHUB_CLIENT_SECRET ||
-  "fe77a8694d991d799d156116654c9074497302ad";
+  "23d039d5a1026e228987e7a73300cba5658d6664";
 
 
 export {
