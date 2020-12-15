@@ -3,6 +3,7 @@ import { URL, TOKEN } from "../constantes";
 
 const client = new ApolloClient({
   uri: URL,
+  cache: new InMemoryCache(),
   headers: {
     authorization: `bearer ${TOKEN}`,
   },
